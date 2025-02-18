@@ -1,0 +1,17 @@
+{
+    "files.associations": {
+        "__tree": "cpp",
+        "map": "cpp",
+        "set": "cpp",
+        "iostream": "cpp",
+        "queue": "cpp",
+        "ostream": "cpp",
+        "vector": "cpp",
+        "regex": "cpp",
+        "chrono": "cpp",
+        "*.tcc": "cpp",
+        "iterator": "cpp",
+        "__locale": "cpp",
+        "ios": "cpp"
+    }
+}
