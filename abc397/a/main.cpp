@@ -8,6 +8,15 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    
+    double X;
+    cin >> X;
+    if (X >= 38.0) {
+        cout << 1;
+    }
+    else if (X >= 37.5 && X < 38.0) {
+        cout << 2;
+    }
+    else cout << 3;
+    cout << endl;
     return 0;
 }

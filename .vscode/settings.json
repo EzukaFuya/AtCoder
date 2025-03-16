@@ -12,6 +12,12 @@
         "*.tcc": "cpp",
         "iterator": "cpp",
         "__locale": "cpp",
-        "ios": "cpp"
+        "ios": "cpp",
+        "string": "cpp",
+        "string_view": "cpp",
+        "__string": "cpp",
+        "bitset": "cpp",
+        "cmath": "cpp",
+        "complex": "cpp"
     }
 }
