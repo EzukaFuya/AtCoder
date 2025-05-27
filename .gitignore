@@ -1,1 +1,5 @@
 *.txt
+sample*.in
+sample*.out
+*.out
+*.json

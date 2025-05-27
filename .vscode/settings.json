@@ -18,6 +18,7 @@
         "__string": "cpp",
         "bitset": "cpp",
         "cmath": "cpp",
-        "complex": "cpp"
+        "complex": "cpp",
+        "sstream": "cpp"
     }
 }
