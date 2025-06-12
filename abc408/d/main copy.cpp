@@ -12,8 +12,7 @@ int main() {
         int N;
         string S;
         cin >> N >> S;
-        
-        // 1の総数を数える
+      
         int total_ones = 0;
         for (char c : S) {
             if (c == '1') total_ones++;

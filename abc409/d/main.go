@@ -4,29 +4,6 @@ import (
 	"fmt"
 )
 
-func solve(s string) string {
-	n := len(s)
-	best := s
-
-	for l := 0; l < n; l++ {
-		for r := l; r < n; r++ {
-			// 左巡回シフトした結果を直接比較
-			// s[l+1:r+1] + s[l] + の部分だけ見て判断可能
-			if l < r {
-				// s[l]を後ろに移動することで改善されるかチェック
-				if s[l+1] < s[l] {
-					rotated := s[:l] + s[l+1:r+1] + string(s[l]) + s[r+1:]
-					if rotated < best {
-						best = rotated
-					}
-				}
-			}
-		}
-	}
-
-	return best
-}
-
 func main() {
 	var T int
 	fmt.Scan(&T)
@@ -36,6 +13,30 @@ func main() {
 		var S string
 		fmt.Scan(&N, &S)
 
-		fmt.Println(solve(S))
+		l := -1
+		r := N
+
+		for j := 0; j < N-1; j++ {
+			if S[j] > S[j+1] {
+				l = j
+				break
+			}
+		}
+
+		if l == -1 {
+			fmt.Println(S)
+			continue
+		}
+
+		for j := l + 1; j < N; j++ {
+			if S[l] < S[j] {
+				r = j
+				break
+			}
+		}
+
+		var ans string
+		ans = S[:l] + S[l+1:r] + string(S[l]) + S[r:]
+		fmt.Println(ans)
 	}
 }

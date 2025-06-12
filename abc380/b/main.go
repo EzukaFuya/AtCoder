@@ -29,5 +29,4 @@ func main() {
 		fmt.Print(n)
 	}
 	fmt.Println()
-
 }
