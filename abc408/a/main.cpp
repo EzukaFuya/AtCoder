@@ -8,19 +8,19 @@ int main() {
     ios::sync_with_stdio(false);
     cin.tie(nullptr);
 
-    int N, D;
-    cin >> N >> D;
-
-    string S;
-    cin >> S;
-
-    int cookys_count = 0;
+    int N, S;
+    cin >> N >> S;
+    vector<int> T(N);
     for (int i = 0; i < N; i++) {
-        if (S[i] == '@') cookys_count++;
+        cin >> T[i];
     }
 
-    int ans = 0;
-    ans = max(cookys_count - D, 0);
-    cout << N - ans << endl;
+    for (int i = 1; i < N; i++) {
+        if (T[i] - T[i-1] > S) {
+            cout << "No" << endl;
+            return 0;
+        }
+    }
+    cout << "Yes" << endl;
     return 0;
 }

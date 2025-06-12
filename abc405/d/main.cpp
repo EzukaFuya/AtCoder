@@ -64,7 +64,7 @@ int main() {
 
     for (int i = 0; i < H; i++) {
         for (int j = 0; j < W; j++) {
-            if (T[i][j] == '.' && dist[i][j] > 0) { // Skip exit and unreachable cells
+            if (T[i][j] == '.' && dist[i][j] > 0) {
                 for (int d = 0; d < 4; d++) {
                     int dx = dirs[d].first;
                     int dy = dirs[d].second;
@@ -75,7 +75,7 @@ int main() {
                     if (dist[nx][ny] != dist[i][j] - 1) continue;
                     
                     T[i][j] = arrows[d];
-                    break; // Found the direction, no need to check others
+                    break;
                 }
             }
         }

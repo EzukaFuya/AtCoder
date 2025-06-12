@@ -18,14 +18,24 @@ int main() {
         cin >> K;
 
         K--; // 0-indexed
-        ll index = K % length_S;
-        bool is_reversed = (K / length_S) % 2 == 1;
-
-        char current_char = S[index];
-        if (is_reversed) {
-            isupper(current_char) ? current_char = tolower(current_char) : current_char = toupper(current_char);
+        ll num_division = K / length_S; // number of full divisions
+        ll index_in_S = K % length_S; // index in S
+        char c = S[index_in_S];
+        int count = 0;
+        while (num_division) {
+            count += num_division & 1;
+            num_division >>= 1;
         }
-        cout << current_char << " ";
+        if (count % 2 == 1) {
+            if (isupper(c)) {
+                c = tolower(c);
+            } else {
+                c = toupper(c);
+            }
+        }
+
+        cout << c;
+        if (i != Q - 1) cout << " ";
     }
 
     cout << endl;

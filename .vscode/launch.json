@@ -1,40 +1,48 @@
 {
-    "version": "0.2.0",
-    "configurations": [
-        {
-            "name": "C++ Debug",
-            "type": "lldb",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "cwd": "${fileDirname}",
-            "preLaunchTask": "build"
-        },
-        {
-            "name": "C/C++: clang build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${fileDirname}/${fileBasenameNoExtension}",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "preLaunchTask": "C/C++: clang build active file"
-        },
-        {
-            "name": "C/C++: clang++ build and debug active file",
-            "type": "cppdbg",
-            "request": "launch",
-            "program": "${workspaceFolder}/a.out",
-            "args": [],
-            "stopAtEntry": false,
-            "cwd": "${fileDirname}",
-            "environment": [],
-            "externalConsole": false,
-            "MIMode": "lldb",
-            "preLaunchTask": "C/C++: Build with Clang"
-        }
-    ]
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C++ Debug",
+      "type": "lldb",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "cwd": "${fileDirname}",
+      "preLaunchTask": "build"
+    },
+    {
+      "name": "C/C++: clang build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${fileDirname}/${fileBasenameNoExtension}",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: clang build active file"
+    },
+    {
+      "name": "C/C++: clang++ build and debug active file",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/a.out",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${fileDirname}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "lldb",
+      "preLaunchTask": "C/C++: Build with Clang"
+    },
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "lldb",
+      "request": "launch",
+      "args": [],
+      "cwd": "/Users/ezukafuya/Documents/GitHub/AtCorder",
+      "program": "/Users/ezukafuya/Documents/GitHub/AtCorder/build/Debug/outDebug"
+    }
+  ]
 }
